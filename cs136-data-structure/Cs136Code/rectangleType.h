@@ -29,8 +29,6 @@ public:
     //Overload the operators
     rectangleType operator+(const rectangleType&) const;
     rectangleType operator*(const rectangleType&) const;
-    bool operator==(const rectangleType&) const;
-    bool operator!=(const rectangleType&) const;
 
     //  Programming Exercise 13-1a
     rectangleType& operator++();
@@ -41,6 +39,10 @@ public:
     //  Programming Exercise 13-1b
     rectangleType operator-(const rectangleType&) const;
 
+
+    //  Programming Exercise 13-1b
+    bool operator==(const rectangleType&) const;
+    bool operator!=(const rectangleType&) const;
 
 
 };

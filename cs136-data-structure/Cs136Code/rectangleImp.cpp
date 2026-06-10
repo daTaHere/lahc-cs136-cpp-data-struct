@@ -1,6 +1,8 @@
 #include <iostream> 
 #include <iomanip> 
+#include <string>
 #include "rectangleType.h"
+
 
 using namespace std;
 
@@ -42,7 +44,7 @@ void rectangleType :: print() const {
 rectangleType& rectangleType :: setLength(const double l) { length = l; return *this; };
 rectangleType& rectangleType :: setWidth(const double w) { width = w; return *this; };
 
-// define overload operators
+// 13d define overload operators pre/post (++, --)
 rectangleType& rectangleType :: operator++() {
     length++;
     width++;
@@ -56,45 +58,52 @@ rectangleType rectangleType :: operator++(int) {
 };
 
 rectangleType& rectangleType :: operator--() {
-    length--;
-    width--;
+    if (length > 1 and width > 1) {
+        length--;
+        width--;
+    }
     return *this;
 };
 rectangleType rectangleType :: operator--(int) {
     rectangleType temp = *this;
-    length--;
-    width--;
+    --(*this);
     return temp;
 };
 
-// define overload operators
+//13d define overload operators ( - )
 rectangleType rectangleType :: operator-(const rectangleType& other) const {
-    if (this->length > other.length && this->width > other.width) {
-        rectangleType result(this->length - other.length, this->length - other.width);
-        return result;
+    double newLength = this->length - other.length;
+    double newWidth = this->width - other.width;
+
+    if (newWidth <= 0 || newLength <= 0) {
+        cout << "Operation invalid! Resulting dimensions must be positive." << endl;
+        return rectangleType();
     }
-    else {
-        cout << "Operation in valid !!! " << endl;
-    }
-        
+    return rectangleType(newLength, newWidth);
+};
+
+//13d define overload operators ( ==, != )
+bool rectangleType :: operator==(const rectangleType& other) const {
+    return this->area() == other.area();
+};
+bool rectangleType :: operator!=(const rectangleType& other) const {
+    return this->area() != other.area();
 };
 
 
 
-
-
-
-void Test13_1() {
+// 13e test function
+void Test13_1e() {
     cout << "=======   13.1 a ( Overload post/pre ++,-- ) =========\n";
     rectangleType recA(1.2,1.5);
     
     cout << fixed << showpoint << setprecision(2);
 
-    cout << "on pre fix ++ : ";
+    cout << "on post fix ++ : ";
     recA++.print();
     cout << endl;
 
-    cout << "on post fix ++ :";
+    cout << "on pre fix ++ :";
     ++recA;
     recA.print();
     cout << endl;
@@ -108,7 +117,7 @@ void Test13_1() {
     recA--.print();
     cout << "\n" << endl;
 
-    cout << "=======   13.1 b ( Overload subtract \"-\") ) =========\n";
+    cout << "\n=======   13.1 b ( Overload subtract \"-\") ) =========\n";
 
     rectangleType recB(10, 12);
     cout << "Test  \"-\" Valid rectangles\n";
@@ -120,5 +129,9 @@ void Test13_1() {
     recD.print();
     cout << endl;
 
+    cout << "\n=======   13.1 c ( Overload  \"== \", \"!= \" ) ) =========\n";
+    cout << "( recA == recB ) = " << ((recA == recB) != 0 ? "True": "False") << endl;
+    
+    cout << "( recA != recB ) = " << ((recA != recB) != 0 ? "True" : "False") << endl;
 }
 
