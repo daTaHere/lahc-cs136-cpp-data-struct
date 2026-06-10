@@ -1,12 +1,12 @@
 #include <iostream> 
 #include <iomanip> 
-#include "rectangleType.h"
+#include "13.1rectangleType.h"
 
 using namespace std;
 
-void Test13_1e();
+void Test13_1();
 
 int main() {
-	Test13_1e();
+	Test13_1();
 	return 0;
 }

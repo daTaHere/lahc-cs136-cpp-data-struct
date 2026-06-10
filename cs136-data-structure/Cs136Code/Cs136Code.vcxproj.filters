@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="rectangleType.h">
+    <ClInclude Include="13.1rectangleType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -23,7 +23,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="rectangleImp.cpp">
+    <ClCompile Include="13.1rectangleImp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

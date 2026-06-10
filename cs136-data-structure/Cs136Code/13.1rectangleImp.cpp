@@ -1,7 +1,7 @@
 #include <iostream> 
 #include <iomanip> 
 #include <string>
-#include "rectangleType.h"
+#include "13.1rectangleType.h"
 
 
 using namespace std;
@@ -106,51 +106,51 @@ bool operator<=(const rectangleType& a, const rectangleType& b) {
 
 
 // 13e test function
-void Test13_1e() {
+void Test13_1() {
     cout << "=======   13.1 a ( Overload post/pre ++,-- ) =========\n";
-    rectangleType recA(1.2,1.5);
+    rectangleType myRectangle(23, 45);
     
     cout << fixed << showpoint << setprecision(2);
 
     cout << "on post fix ++ : ";
-    recA++.print();
+    myRectangle++.print();
     cout << endl;
 
     cout << "on pre fix ++ :";
-    ++recA;
-    recA.print();
+    ++myRectangle;
+    myRectangle.print();
     cout << endl;
 
     cout << "on post fix -- :";
-    --recA;
-    recA.print();
+    --myRectangle;
+    myRectangle.print();
     cout << endl;
 
     cout << "on pre fix -- : ";
-    recA--.print();
+    myRectangle--.print();
     cout << "\n" << endl;
 
     cout << "\n=======   13.1 b ( Overload subtract \"-\") ) =========\n";
 
-    rectangleType recB(10, 12);
-    cout << "Test  \"-\" Valid rectangles\n";
-    rectangleType recC = recB - recA;
+    rectangleType yourRectangle(10, 12);
+    cout << "Test  \"-\" Invalid rectangles\n";
+    rectangleType recC = yourRectangle - myRectangle;
     recC.print();
 
     cout << "Test  \"-\" Valid rectangles\n";
-    rectangleType recD = recA - recB;
+    rectangleType recD = myRectangle - yourRectangle;
     recD.print();
     cout << endl;
 
     cout << "\n=======   13.1 c ( Overload  \"== \", \"!= \" ) ) =========\n";
-    cout << "( recA == recB ) = " << ((recA == recB) != 0 ? "True": "False") << endl;
+    cout << "( myRectangle == recB ) = " << ((myRectangle == yourRectangle) != 0 ? "True": "False") << endl;
     
-    cout << "( recA != recB ) = " << ((recA != recB) != 0 ? "True" : "False") << endl;
+    cout << "( myRectangle != recB ) = " << ((myRectangle != yourRectangle) != 0 ? "True" : "False") << endl;
 
     cout << "\n=======   13.1 c ( Overload  friend funct ) =========\n";
-    cout << "( recA > recB ) = " << ((recA > recB) != 0 ? "True" : "False") << endl;
-    cout << "( recA >= recB ) = " << ((recA >= recB) != 0 ? "True" : "False") << endl;
-    cout << "( recA < recB ) = " << ((recA < recB) != 0 ? "True" : "False") << endl;
-    cout << "( recB <= recA ) = " << ((recB<= recA) != 0 ? "True" : "False") << endl;
+    cout << "( myRectangle > recB ) = " << ((myRectangle > yourRectangle) != 0 ? "True" : "False") << endl;
+    cout << "( myRectangle >= recB ) = " << ((myRectangle >= yourRectangle) != 0 ? "True" : "False") << endl;
+    cout << "( myRectangle < recB ) = " << ((myRectangle < yourRectangle) != 0 ? "True" : "False") << endl;
+    cout << "( yourRectangle <= myRectangle ) = " << ((yourRectangle <= myRectangle) != 0 ? "True" : "False") << endl;
 }
 
