@@ -52,8 +52,7 @@ rectangleType& rectangleType :: operator++() {
 };
 rectangleType rectangleType :: operator++(int) {
     rectangleType temp = *this;
-    length++;
-    width++;
+    ++(*this);
     return temp;
 };
 
@@ -91,17 +90,17 @@ bool rectangleType :: operator!=(const rectangleType& other) const {
 };
 
 // 13d friends 
-bool operator>(const rectangleType& a, const rectangleType& b )  {
-    return a.area() > b.area();
+bool rectangleType :: operator>(const rectangleType& a) const  {
+    return a.area() > a.area();
 };
-bool operator>=(const rectangleType& a, const rectangleType& b) {
-    return a.area() >= b.area();
+bool rectangleType :: operator>=(const rectangleType& a) const {
+    return this->area() >= a.area();
 };
-bool operator<(const rectangleType& a, const rectangleType& b) {
-    return a.area() < b.area();
+bool rectangleType :: operator<(const rectangleType& a) const {
+    return this->area() < a.area();
 };
-bool operator<=(const rectangleType& a, const rectangleType& b) {
-    return a.area() <= b.area();
+bool rectangleType :: operator<=(const rectangleType& a) const {
+    return (*this).area() <= a.area();
 };
 
 

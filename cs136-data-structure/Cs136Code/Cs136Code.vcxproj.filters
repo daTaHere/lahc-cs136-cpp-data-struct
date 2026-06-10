@@ -26,5 +26,11 @@
     <ClCompile Include="13.1rectangleImp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="13.2rectangleImpfriends.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="13.2rectangleType2.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
