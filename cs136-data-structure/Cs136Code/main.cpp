@@ -4,24 +4,9 @@
 
 using namespace std;
 
+void Test13_1();
+
 int main() {
-  
-    rectangleType myRectangle;
-    rectangleType yourRectangle;
-    cout << fixed << showpoint << setprecision(2);
-
-    myRectangle.setLength(15.25).setWidth(12.00);
-    cout << "Line 11 -- myRectangle: ";
-    myRectangle.print();
-    cout << endl;
-    yourRectangle.setLength(18.50);
-    cout << "Line 15 -- yourRectangle: ";
-    yourRectangle.print();
-    cout << endl;
-    yourRectangle.setWidth(7.50);
-    cout << "Line 19 -- yourRectangle: ";
-    yourRectangle.print();
-    cout << endl;
-
+	Test13_1();
 	return 0;
 }
