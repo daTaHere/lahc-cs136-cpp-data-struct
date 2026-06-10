@@ -43,6 +43,8 @@ public:
     //  Programming Exercise 13-1b
     bool operator==(const rectangleType&) const;
     bool operator!=(const rectangleType&) const;
-
-
+    bool friend operator>(const rectangleType& a, const rectangleType& b);
+    bool friend operator>=(const rectangleType& a, const rectangleType& b);
+    bool friend operator<(const rectangleType& a, const rectangleType& b);
+    bool friend operator<=(const rectangleType& a, const rectangleType& b);
 };

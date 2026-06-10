@@ -82,7 +82,7 @@ rectangleType rectangleType :: operator-(const rectangleType& other) const {
     return rectangleType(newLength, newWidth);
 };
 
-//13d define overload operators ( ==, != )
+//13d define overload operators ( ==, !=, <, <=, >, >= )
 bool rectangleType :: operator==(const rectangleType& other) const {
     return this->area() == other.area();
 };
@@ -90,6 +90,19 @@ bool rectangleType :: operator!=(const rectangleType& other) const {
     return this->area() != other.area();
 };
 
+// 13d friends 
+bool operator>(const rectangleType& a, const rectangleType& b )  {
+    return a.area() > b.area();
+};
+bool operator>=(const rectangleType& a, const rectangleType& b) {
+    return a.area() >= b.area();
+};
+bool operator<(const rectangleType& a, const rectangleType& b) {
+    return a.area() < b.area();
+};
+bool operator<=(const rectangleType& a, const rectangleType& b) {
+    return a.area() <= b.area();
+};
 
 
 // 13e test function
@@ -133,5 +146,11 @@ void Test13_1e() {
     cout << "( recA == recB ) = " << ((recA == recB) != 0 ? "True": "False") << endl;
     
     cout << "( recA != recB ) = " << ((recA != recB) != 0 ? "True" : "False") << endl;
+
+    cout << "\n=======   13.1 c ( Overload  friend funct ) =========\n";
+    cout << "( recA > recB ) = " << ((recA > recB) != 0 ? "True" : "False") << endl;
+    cout << "( recA >= recB ) = " << ((recA >= recB) != 0 ? "True" : "False") << endl;
+    cout << "( recA < recB ) = " << ((recA < recB) != 0 ? "True" : "False") << endl;
+    cout << "( recB <= recA ) = " << ((recB<= recA) != 0 ? "True" : "False") << endl;
 }
 
