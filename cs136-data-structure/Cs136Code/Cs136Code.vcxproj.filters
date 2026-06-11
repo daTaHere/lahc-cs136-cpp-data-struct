@@ -35,5 +35,8 @@
     <ClCompile Include="13.2RectangleType2.h">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="13.7complexImp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

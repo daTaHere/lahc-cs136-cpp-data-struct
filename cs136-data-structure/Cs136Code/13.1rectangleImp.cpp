@@ -1,6 +1,5 @@
 #include <iostream> 
 #include <iomanip> 
-#include <string>
 #include "13.1RectangleType.h"
 
 
