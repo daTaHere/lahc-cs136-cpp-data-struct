@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="13.1rectangleType.h">
+    <ClInclude Include="13.1RectangleType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="13.7ComplexType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -29,7 +32,7 @@
     <ClCompile Include="13.2rectangleImpfriends.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="13.2rectangleType2.h">
+    <ClCompile Include="13.2RectangleType2.h">
       <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,7 +1,7 @@
 #include <iostream> 
 #include <iomanip> 
 #include <string>
-#include "13.1rectangleType.h"
+#include "13.1RectangleType.h"
 
 
 using namespace std;
@@ -91,7 +91,7 @@ bool rectangleType :: operator!=(const rectangleType& other) const {
 
 // 13d friends 
 bool rectangleType :: operator>(const rectangleType& a) const  {
-    return a.area() > a.area();
+    return this->area() > a.area();
 };
 bool rectangleType :: operator>=(const rectangleType& a) const {
     return this->area() >= a.area();
@@ -142,14 +142,36 @@ void Test13_1() {
     cout << endl;
 
     cout << "\n=======   13.1 c ( Overload  \"== \", \"!= \" ) ) =========\n";
-    cout << "( myRectangle == recB ) = " << ((myRectangle == yourRectangle) != 0 ? "True": "False") << endl;
-    
-    cout << "( myRectangle != recB ) = " << ((myRectangle != yourRectangle) != 0 ? "True" : "False") << endl;
+    cout << "+++  myRectangle Area: " << myRectangle.area() << endl;
+    cout << "+++ yourRectangle: " << yourRectangle.area() << endl;;
+
+    cout << "\n-------     test ==  ------" << endl;
+    cout << "( myRectangle == yourRectangle ) = " << ((myRectangle == yourRectangle) != 0 ? "True" : "False") << endl;
+    cout << "( myRectangle == myRectangle ) = " << ((myRectangle == myRectangle) != 0 ? "True" : "False") << endl;
+
+    cout << "\n-------     test !=  ------" << endl;
+    cout << "( myRectangle != yourRectangle ) = " << ((myRectangle != yourRectangle) != 0 ? "True" : "False") << endl;
+    cout << "( yourRectangle != yourRectangle ) = " << ((yourRectangle != yourRectangle) != 0 ? "True" : "False") << endl;
 
     cout << "\n=======   13.1 c ( Overload  friend funct ) =========\n";
-    cout << "( myRectangle > recB ) = " << ((myRectangle > yourRectangle) != 0 ? "True" : "False") << endl;
-    cout << "( myRectangle >= recB ) = " << ((myRectangle >= yourRectangle) != 0 ? "True" : "False") << endl;
-    cout << "( myRectangle < recB ) = " << ((myRectangle < yourRectangle) != 0 ? "True" : "False") << endl;
-    cout << "( yourRectangle <= myRectangle ) = " << ((yourRectangle <= myRectangle) != 0 ? "True" : "False") << endl;
+    cout << "\n-------     test >  ------" << endl;
+    cout << "( myRectangle > yourRectangle ) = " << ((myRectangle > yourRectangle) != 0 ? "True" : "False") << endl;
+    cout << "( yourRectangle > myRectangle ) = " << ((yourRectangle > myRectangle) != 0 ? "True" : "False") << endl;
+    cout << "( myRectangle > myRectangle ) = " << ((myRectangle > myRectangle) != 0 ? "True" : "False") << endl;
+
+    cout << "\n-------     test >=  ------" << endl;
+    cout << "( myRectangle >= yourRectangle ) = " << ((myRectangle >= yourRectangle) != 0 ? "True" : "False") << endl;
+    cout << "( yourRectangle >= myRectangle ) = " << ((yourRectangle >= myRectangle) != 0 ? "True" : "False") << endl;
+    cout << "( yourRectangle >= yourRectangle ) = " << ((yourRectangle >= yourRectangle) != 0 ? "True" : "False") << endl;
+
+    cout << "\n-------     test <   ------" << endl;
+    cout << "( myRectangle < yourRectangle ) = " << ((myRectangle < yourRectangle) != 0 ? "True" : "False") << endl;
+    cout << "( yourRectangle < meRectangle ) = " << ((yourRectangle < myRectangle) != 0 ? "True" : "False") << endl;
+    cout << "( yourRectangle < yourRectangle ) = " << ((yourRectangle < yourRectangle) != 0 ? "True" : "False") << endl;
+
+    cout << "\n-------     test <=   ------" << endl;
+    cout << "( myRectangle <= yourRectangle ) = " << ((myRectangle <= yourRectangle) != 0 ? "True" : "False") << endl;
+    cout << "( myRectangle <= yourRectangle ) = " << ((yourRectangle <= myRectangle) != 0 ? "True" : "False") << endl;
+    cout << "( myRectangle <= myRectangle ) = " << ((myRectangle <= myRectangle) != 0 ? "True" : "False") << endl;
 }
 
