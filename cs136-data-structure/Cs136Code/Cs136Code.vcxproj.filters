@@ -38,5 +38,8 @@
     <ClCompile Include="13.7complexImp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="feetMeterConverterImp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
