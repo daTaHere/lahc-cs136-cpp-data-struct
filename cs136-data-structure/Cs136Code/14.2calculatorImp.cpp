@@ -75,7 +75,7 @@ int getInput(bool rejectZero = false) {
                 throw invalid_argument("Expected integer input.");
 
             if (rejectZero && value == 0)
-                throw divisionByZero();
+                throw divisionByZero("Expect non zero value");  // custom exception handler
 
             return value;
         }
