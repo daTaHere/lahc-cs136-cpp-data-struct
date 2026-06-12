@@ -4,7 +4,7 @@
 using namespace std;
 
 
-class rectangleType2 {
+class RectangleType2 {
 
 protected:
     double length;
@@ -12,14 +12,14 @@ protected:
 
 public:
     // Constructors
-    rectangleType2();
-    rectangleType2(double l, double w);
+    RectangleType2();
+    RectangleType2(double l, double w);
 
     // Methods
     void setDimension(double l, double w);
-    rectangleType2 doubleDimensions();
-    rectangleType2& setLength(const double l);
-    rectangleType2& setWidth(const double w);
+    RectangleType2 doubleDimensions();
+    RectangleType2& setLength(const double l);
+    RectangleType2& setWidth(const double w);
     double getLength() const;
     double getWidth() const;
     double area() const;
@@ -28,20 +28,20 @@ public:
 
 
     //  Programming Exercise 13-1a
-    friend rectangleType2& operator++( rectangleType2& a );
-    friend rectangleType2  operator++(  rectangleType2& a, int);
-    friend rectangleType2&  operator--( rectangleType2& a);
-    friend rectangleType2  operator--(  rectangleType2& a, int);
+    friend RectangleType2& operator++( RectangleType2& a );
+    friend RectangleType2  operator++(  RectangleType2& a, int);
+    friend RectangleType2&  operator--( RectangleType2& a);
+    friend RectangleType2  operator--(  RectangleType2& a, int);
 
     //  Programming Exercise 13-1b
-    friend rectangleType2 operator-(const rectangleType2& lhs, const rectangleType2& rhs);
+    friend RectangleType2 operator-(const RectangleType2& lhs, const RectangleType2& rhs);
 
 
     //  Programming Exercise 13-1b
-    friend bool  operator==(const rectangleType2&, const rectangleType2& b) ;
-    friend bool  operator!=(const rectangleType2&, const rectangleType2& b) ;
-    friend  bool  operator>(const rectangleType2& a, const rectangleType2& b);
-    friend bool  operator>=(const rectangleType2& a, const rectangleType2& b);
-    friend bool  operator<(const rectangleType2& a, const rectangleType2& b);
-    friend bool  operator<=(const rectangleType2& a, const rectangleType2& b);
+    friend bool  operator==(const RectangleType2&, const RectangleType2& b) ;
+    friend bool  operator!=(const RectangleType2&, const RectangleType2& b) ;
+    friend  bool  operator>(const RectangleType2& a, const RectangleType2& b);
+    friend bool  operator>=(const RectangleType2& a, const RectangleType2& b);
+    friend bool  operator<(const RectangleType2& a, const RectangleType2& b);
+    friend bool  operator<=(const RectangleType2& a, const RectangleType2& b);
 };

@@ -4,14 +4,14 @@
 using namespace std;
 
 // Custom class derive from base class with message optiona
-class divisionByZero : public exception {
+class DivisionByZero : public exception {
 private:
     string message;
 
 public:
-    divisionByZero() : message("Division by zero") {}
+    DivisionByZero() : message("Division by zero") {}
 
-    divisionByZero(const string& msg) : message(msg) {}
+    DivisionByZero(const string& msg) : message(msg) {}
 
     const char* what() const noexcept override {
         return message.c_str();

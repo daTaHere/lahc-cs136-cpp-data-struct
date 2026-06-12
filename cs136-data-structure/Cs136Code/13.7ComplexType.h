@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 using namespace std;
-class complexType {
+class ComplexType {
 private:
     double realPart;
     double imaginaryPart;
@@ -10,22 +10,22 @@ private:
 
 public:
     //Constructor
-    complexType(double real = 0, double imag = 0);
+    ComplexType(double real = 0, double imag = 0);
 
     // Getters and Setters
     void setComplex(const double& real, const double& imag);
     void getComplex(double& real, double& imag) const;
 
     //Overload the operators
-    complexType operator+ (const complexType& other) const;
-    complexType operator* (const complexType& other) const;
-    bool operator== (const complexType& other) const;
+    ComplexType operator+ (const ComplexType& other) const;
+    ComplexType operator* (const ComplexType& other) const;
+    bool operator== (const ComplexType& other) const;
    
     //Friend Overload the stream insertion and extraction operators
-    friend ostream& operator<<(ostream& out, const complexType&);
-    friend istream& operator>>(istream& in, complexType&);
+    friend ostream& operator<<(ostream& out, const ComplexType&);
+    friend istream& operator>>(istream& in, ComplexType&);
 
     // 13.7 methods  ===========================
-    complexType operator- (const complexType& other) const;
-    complexType operator/ (const complexType& other) const;
+    ComplexType operator- (const ComplexType& other) const;
+    ComplexType operator/ (const ComplexType& other) const;
 };

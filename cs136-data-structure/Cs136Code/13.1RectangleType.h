@@ -1,7 +1,7 @@
 #pragma once
 using namespace std;
 
-class rectangleType {
+class RectangleType {
 
 protected:
     double length;
@@ -9,14 +9,14 @@ protected:
 
 public:
     // Constructors
-    rectangleType();
-    rectangleType(double l, double w);
+    RectangleType();
+    RectangleType(double l, double w);
 
     // Methods
     void setDimension(double l, double w);
-    rectangleType doubleDimensions();
-    rectangleType& setLength(const double l);
-    rectangleType& setWidth(const double w);
+    RectangleType doubleDimensions();
+    RectangleType& setLength(const double l);
+    RectangleType& setWidth(const double w);
     double getLength() const;
     double getWidth() const;
     double area() const;
@@ -24,24 +24,24 @@ public:
     void print() const;
 
     //Overload the operators
-    rectangleType operator+(const rectangleType&) const;
-    rectangleType operator*(const rectangleType&) const;
+    RectangleType operator+(const RectangleType&) const;
+    RectangleType operator*(const RectangleType&) const;
 
     //  Programming Exercise 13-1a
-    rectangleType& operator++();
-    rectangleType operator++(int);
-    rectangleType& operator--();
-    rectangleType operator--(int);
+    RectangleType& operator++();
+    RectangleType operator++(int);
+    RectangleType& operator--();
+    RectangleType operator--(int);
 
     //  Programming Exercise 13-1b
-    rectangleType operator-(const rectangleType&) const;
+    RectangleType operator-(const RectangleType&) const;
 
 
     //  Programming Exercise 13-1b
-    bool operator==(const rectangleType&) const;
-    bool operator!=(const rectangleType&) const;
-    bool  operator>(const rectangleType& a) const;
-    bool  operator>=(const rectangleType& a) const;
-    bool  operator<(const rectangleType& a) const;
-    bool  operator<=(const rectangleType& a) const;
+    bool operator==(const RectangleType&) const;
+    bool operator!=(const RectangleType&) const;
+    bool  operator>(const RectangleType& a) const;
+    bool  operator>=(const RectangleType& a) const;
+    bool  operator<(const RectangleType& a) const;
+    bool  operator<=(const RectangleType& a) const;
 };

@@ -6,14 +6,14 @@
 using namespace std;
 
 // define construtors
-rectangleType :: rectangleType()  {
+RectangleType :: RectangleType()  {
 	length = 0;
 	width = 0;
 }
-rectangleType :: rectangleType( double l, double w) : length(l), width(w) {}
+RectangleType :: RectangleType( double l, double w) : length(l), width(w) {}
 
 // define methods
-void rectangleType :: setDimension(double l, double w) {
+void RectangleType :: setDimension(double l, double w) {
     if (l >= 0)
         length = l;
     else
@@ -24,81 +24,81 @@ void rectangleType :: setDimension(double l, double w) {
         width = 0;
 }
 
-rectangleType rectangleType :: doubleDimensions() {
+RectangleType RectangleType :: doubleDimensions() {
     length *= 2;
     width *= 2;
     return *this;
 }
 
 
-double rectangleType :: getLength() const { return length; }
-double rectangleType :: getWidth() const { return width; }
-double rectangleType :: area() const { return length * width; }
-double rectangleType :: perimeter() const { return 2 * (length + width); }
-void rectangleType :: print() const {
+double RectangleType :: getLength() const { return length; }
+double RectangleType :: getWidth() const { return width; }
+double RectangleType :: area() const { return length * width; }
+double RectangleType :: perimeter() const { return 2 * (length + width); }
+void RectangleType :: print() const {
     cout << "Length = " << length << "; Width = " << width;
 }
 
 
-rectangleType& rectangleType :: setLength(const double l) { length = l; return *this; };
-rectangleType& rectangleType :: setWidth(const double w) { width = w; return *this; };
+RectangleType& RectangleType :: setLength(const double l) { length = l; return *this; };
+RectangleType& RectangleType :: setWidth(const double w) { width = w; return *this; };
 
 // 13d define overload operators pre/post (++, --)
-rectangleType& rectangleType :: operator++() {
+RectangleType& RectangleType :: operator++() {
     length++;
     width++;
     return *this;
 };
-rectangleType rectangleType :: operator++(int) {
-    rectangleType temp = *this;
+RectangleType RectangleType :: operator++(int) {
+    RectangleType temp = *this;
     ++(*this);
     return temp;
 };
 
-rectangleType& rectangleType :: operator--() {
+RectangleType& RectangleType :: operator--() {
     if (length > 1 and width > 1) {
         length--;
         width--;
     }
     return *this;
 };
-rectangleType rectangleType :: operator--(int) {
-    rectangleType temp = *this;
+RectangleType RectangleType :: operator--(int) {
+    RectangleType temp = *this;
     --(*this);
     return temp;
 };
 
 //13d define overload operators ( - )
-rectangleType rectangleType :: operator-(const rectangleType& other) const {
+RectangleType RectangleType :: operator-(const RectangleType& other) const {
     double newLength = this->length - other.length;
     double newWidth = this->width - other.width;
 
     if (newWidth <= 0 || newLength <= 0) {
         cout << "Operation invalid! Resulting dimensions must be positive." << endl;
-        return rectangleType();
+        return RectangleType();
     }
-    return rectangleType(newLength, newWidth);
+    return RectangleType(newLength, newWidth);
 };
 
 //13d define overload operators ( ==, !=, <, <=, >, >= )
-bool rectangleType :: operator==(const rectangleType& other) const {
+bool RectangleType :: operator==(const RectangleType& other) const {
     return this->area() == other.area();
 };
-bool rectangleType :: operator!=(const rectangleType& other) const {
+bool RectangleType :: operator!=(const RectangleType& other) const {
     return this->area() != other.area();
 };
 
 // 13d friends 
-bool rectangleType :: operator>(const rectangleType& a) const  {
+bool RectangleType :: operator>(const RectangleType& a) const  {
     return this->area() > a.area();
 };
-bool rectangleType :: operator>=(const rectangleType& a) const {
+bool RectangleType :: operator>=(const RectangleType& a) const {
     return this->area() >= a.area();
 };
-bool rectangleType :: operator<(const rectangleType& a) const {
+bool RectangleType :: operator<(const RectangleType& a) const {
     return this->area() < a.area();
 };
-bool rectangleType :: operator<=(const rectangleType& a) const {
+bool RectangleType :: operator<=(const RectangleType& a) const {
     return (*this).area() <= a.area();
 };
 
@@ -106,7 +106,7 @@ bool rectangleType :: operator<=(const rectangleType& a) const {
 // 13e test function
 void Test13_1() {
     cout << "=======   13.1 a ( Overload post/pre ++,-- ) =========\n";
-    rectangleType myRectangle(23, 45);
+    RectangleType myRectangle(23, 45);
     
     cout << fixed << showpoint << setprecision(2);
 
@@ -130,13 +130,13 @@ void Test13_1() {
 
     cout << "\n=======   13.1 b ( Overload subtract \"-\") ) =========\n";
 
-    rectangleType yourRectangle(10, 12);
+    RectangleType yourRectangle(10, 12);
     cout << "Test  \"-\" Invalid rectangles\n";
-    rectangleType recC = yourRectangle - myRectangle;
+    RectangleType recC = yourRectangle - myRectangle;
     recC.print();
 
     cout << "Test  \"-\" Valid rectangles\n";
-    rectangleType recD = myRectangle - yourRectangle;
+    RectangleType recD = myRectangle - yourRectangle;
     recD.print();
     cout << endl;
 

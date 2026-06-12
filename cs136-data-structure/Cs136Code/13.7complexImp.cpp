@@ -2,29 +2,29 @@
 #include <iomanip> 
 #include "13.7ComplexType.h"
 
-complexType :: complexType(double real, double imag) : 
+ComplexType :: ComplexType(double real, double imag) : 
 	realPart(real), imaginaryPart(imag) {};
 
-void complexType :: setComplex(const double& real, const double& imag) {
+void ComplexType :: setComplex(const double& real, const double& imag) {
 	realPart = real;
 	imaginaryPart = imag;
 };
 
-void complexType :: getComplex(double& real, double& imag) const {
+void ComplexType :: getComplex(double& real, double& imag) const {
     real = realPart;
     imag = imaginaryPart;
 }
 
 // member overload operators
-complexType complexType :: operator+ (const complexType& other) const {
-    complexType sum;
+ComplexType ComplexType :: operator+ (const ComplexType& other) const {
+    ComplexType sum;
     sum.realPart = realPart + other.realPart;
     sum.imaginaryPart = imaginaryPart + other.imaginaryPart;
     return sum;
 };
 
-complexType complexType :: operator* (const complexType& other) const {
-    complexType prod;
+ComplexType ComplexType :: operator* (const ComplexType& other) const {
+    ComplexType prod;
     double ac = realPart * other.realPart;
     double bd = imaginaryPart * other.imaginaryPart;
     prod.realPart = ac - bd;
@@ -36,16 +36,16 @@ complexType complexType :: operator* (const complexType& other) const {
     return prod;
 };
 
-bool complexType :: operator== (const complexType& other) const {
+bool ComplexType :: operator== (const ComplexType& other) const {
     return (realPart == other.realPart && imaginaryPart == other.imaginaryPart);
 }
 
 // friend overload operator 
-ostream& operator<<(ostream& out, const complexType& lhs) {
+ostream& operator<<(ostream& out, const ComplexType& lhs) {
     out << "("  << lhs.realPart << ", " << lhs.imaginaryPart << ")";
     return out;
 };
-istream& operator>>(istream& in, complexType& lhs) {
+istream& operator>>(istream& in, ComplexType& lhs) {
     char ch;
     in >> ch >> lhs.realPart; 
     in >> ch >> lhs.imaginaryPart;
@@ -54,19 +54,19 @@ istream& operator>>(istream& in, complexType& lhs) {
 };
 
 //  ========  13.7 overload operator ( -, / )  ==========================
-complexType complexType :: operator- (const complexType& other) const {
-    complexType diff;
+ComplexType ComplexType :: operator- (const ComplexType& other) const {
+    ComplexType diff;
     diff.realPart = realPart - other.realPart;
     diff.imaginaryPart = imaginaryPart - other.imaginaryPart;
     return diff;
 };
 
-complexType complexType :: operator/ (const complexType& other) const {
+ComplexType ComplexType :: operator/ (const ComplexType& other) const {
     double a = realPart;
     double b = imaginaryPart;
     double c = other.realPart;
     double d = other.imaginaryPart;
-    complexType quotient;
+    ComplexType quotient;
     if (c != 0 || d != 0) {
         double donaminator = (c * c) + (d * d);
         quotient.realPart = (a * c + b * d) / donaminator;
@@ -83,9 +83,9 @@ void Test13_7() {
     cout << "=======   13.7 ( 7ComplexType ) =========\n";
     cout << fixed << showpoint << setprecision(2);
 
-    complexType num1(21, 18);
-    complexType num2;
-    complexType num3;
+    ComplexType num1(21, 18);
+    ComplexType num2;
+    ComplexType num3;
     cout << "Num1 = " << num1 << endl;
     cout << "Num2 = " << num2 << endl;
 
@@ -112,7 +112,7 @@ void Test13_7() {
     cout << "\n-------     test  /  ------" << endl;
     cout << "( num1/num2 ) = " << (num1/ num2) << endl;
 
-    complexType zeros;
+    ComplexType zeros;
     cout << "( num1/zeros ) = " << (num1 / zeros) << endl;
 }
 

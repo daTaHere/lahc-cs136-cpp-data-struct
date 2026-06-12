@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-class calculatorType {
+class CalculatorType {
 
 private:
 	int firstTerm;
@@ -10,7 +10,7 @@ private:
 
 public:
 	// constructor
-	calculatorType(int fTerm = 0, int sTerm = 0);
+	CalculatorType(int fTerm = 0, int sTerm = 0);
 
 	// methods
 	void add() const;

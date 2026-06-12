@@ -10,22 +10,22 @@ using namespace std;
 int getInput(bool rejectZero);
 void inputHelper(const string message);
 
-calculatorType :: calculatorType(int fTerm, int sTerm) 
+CalculatorType :: CalculatorType(int fTerm, int sTerm) 
     : firstTerm(fTerm), secondTerm(sTerm) {};
 
-void calculatorType :: add() const  {
+void CalculatorType :: add() const  {
     cout << firstTerm << " + " << secondTerm << " = " << firstTerm + secondTerm << endl;
 }
 
-void calculatorType::subtract() const  {
+void CalculatorType::subtract() const  {
     cout << firstTerm << " - " << secondTerm << " = " << firstTerm - secondTerm << endl;
 }
 
-void calculatorType::multiply() const {
+void CalculatorType::multiply() const {
     cout << firstTerm << " * " << secondTerm << " = " << firstTerm * secondTerm << endl;
 }
 
-void calculatorType :: divide() const {
+void CalculatorType :: divide() const {
     double result = firstTerm / static_cast<double>(secondTerm);
     cout << fixed << showpoint << setprecision(2);
     cout << firstTerm << " / " << secondTerm << " = " << result << endl;
@@ -75,7 +75,7 @@ int getInput(bool rejectZero = false) {
                 throw invalid_argument("Expected integer input.");
 
             if (rejectZero && value == 0)
-                throw divisionByZero("Expect non zero value");  // custom exception handler
+                throw DivisionByZero("Expect non zero value");  // custom exception handler
 
             return value;
         }
@@ -83,8 +83,8 @@ int getInput(bool rejectZero = false) {
             cerr << "invalid_argument: " << e.what() << endl;
             inputHelper("Your Number: ");
         }
-        catch (const divisionByZero& e) {
-            cerr << "divisionByZero: " << e.what() << endl;
+        catch (const DivisionByZero& e) {
+            cerr << "DivisionByZero: " << e.what() << endl;
             inputHelper("Your Number: ");
         }
     }
@@ -109,7 +109,7 @@ void Test14_2() {
     cout << (isDivision ? "Input must be Non-Zero\nEnter second term : " : "Enter second term: ");
     y = getInput(isDivision);
 
-    calculatorType calculate(x, y);
+    CalculatorType calculate(x, y);
 
         switch (operation)
         {
