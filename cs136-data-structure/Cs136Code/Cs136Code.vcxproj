@@ -131,6 +131,10 @@
     <ClInclude Include="13.7ComplexType.h" />
     <ClInclude Include="14.2CalculatorType.h" />
     <ClInclude Include="14.2DivisionByZero.h" />
+    <ClInclude Include="14.4ClockType.h" />
+    <ClInclude Include="14.4InvalidHr.h" />
+    <ClInclude Include="14.4InvalidMin.h" />
+    <ClInclude Include="14.4InvalidSec.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="13.2rectangleImpfriends.cpp" />
@@ -138,6 +142,7 @@
     <ClCompile Include="13.7complexImp.cpp" />
     <ClCompile Include="14.2calculatorImp.cpp" />
     <ClCompile Include="14.1feetMeterConverterImp.cpp" />
+    <ClCompile Include="14.4clocktypeImp.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="13.1rectangleImp.cpp" />
   </ItemGroup>

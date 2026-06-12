@@ -27,6 +27,18 @@
     <ClInclude Include="14.2DivisionByZero.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="14.4ClockType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="14.4InvalidHr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="14.4InvalidMin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="14.4InvalidSec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -48,6 +60,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="14.2calculatorImp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="14.4clocktypeImp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
