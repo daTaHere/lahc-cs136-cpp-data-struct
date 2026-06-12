@@ -21,6 +21,9 @@
     <ClInclude Include="13.7ComplexType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="14.2CalculatorType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -38,7 +41,10 @@
     <ClCompile Include="13.7complexImp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="feetMeterConverterImp.cpp">
+    <ClCompile Include="14.1feetMeterConverterImp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="14.1calculatorImp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
