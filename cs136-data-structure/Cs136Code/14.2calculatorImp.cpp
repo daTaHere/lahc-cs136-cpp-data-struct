@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <string>
 #include "14.2CalculatorType.h"
-
+#include "14.2DivisionByZero.h"
 using namespace std;
 
 // Prototypes
@@ -75,7 +75,7 @@ int getInput(bool rejectZero = false) {
                 throw invalid_argument("Expected integer input.");
 
             if (rejectZero && value == 0)
-                throw domain_error("Divide by 0 violation!");
+                throw divisionByZero();
 
             return value;
         }
@@ -83,8 +83,8 @@ int getInput(bool rejectZero = false) {
             cerr << "invalid_argument: " << e.what() << endl;
             inputHelper("Your Number: ");
         }
-        catch (const domain_error& e) {
-            cerr << "domain_error: " << e.what() << endl;
+        catch (const divisionByZero& e) {
+            cerr << "divisionByZero: " << e.what() << endl;
             inputHelper("Your Number: ");
         }
     }
