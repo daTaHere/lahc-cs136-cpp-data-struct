@@ -192,9 +192,6 @@ void clockConvertor(const vector<int>& time) {
             continue;
         }
     } while (!isValid);
-
-    
-
 }
 
 
@@ -204,10 +201,4 @@ void Test14_4() {
     cout << "Enter the time in the form " << "hr:min:sec ";
     vector<int> time = isValidTime();
     clockConvertor(time);
-
-    //cin >> myClock;
-    //cout << endl;
-    //cout << "Line 13: The new time of myClock = " << myClock << endl;
-    //++myClock;
-    //cout << "Line 15: After incrementing the time, " << "myClock = " << myClock << endl;
 }
