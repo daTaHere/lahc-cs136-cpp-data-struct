@@ -1,14 +1,12 @@
 #include <iostream>
 #include <iomanip> 
-#include <algorithm>
-#include <string>
 #include "14.2CalculatorType.h"
 #include "14.2DivisionByZero.h"
 using namespace std;
 
 // Prototypes
 int getInput(bool rejectZero);
-void inputHelper(const string message);
+void calculatorInputHelper(const string message);
 
 CalculatorType :: CalculatorType(int fTerm, int sTerm) 
     : firstTerm(fTerm), secondTerm(sTerm) {};
@@ -47,11 +45,11 @@ char getOperation(bool& isDivision) {
         }
         catch (const invalid_argument& e) {
             cerr << "invalid_argument: " << e.what() << endl;
-            inputHelper("Your Operation: ");
+            calculatorInputHelper("Your Operation: ");
         }
         catch (const out_of_range& e) {
             cerr << "invalid_argument: " << e.what() << endl;
-            inputHelper("Your Operation: ");
+            calculatorInputHelper("Your Operation: ");
         }
     }
 }
@@ -81,16 +79,16 @@ int getInput(bool rejectZero = false) {
         }
         catch (const invalid_argument& e) {
             cerr << "invalid_argument: " << e.what() << endl;
-            inputHelper("Your Number: ");
+            calculatorInputHelper("Your Number: ");
         }
         catch (const DivisionByZero& e) {
             cerr << "DivisionByZero: " << e.what() << endl;
-            inputHelper("Your Number: ");
+            calculatorInputHelper("Your Number: ");
         }
     }
 }
 
-void inputHelper(const string message) {
+void calculatorInputHelper(const string message) {
     cin.clear(); // clear error flag
     cin.ignore(numeric_limits<streamsize>::max(), '\n'); // discard invalid input
     cout << "Try again.\n";
@@ -111,8 +109,7 @@ void Test14_2() {
 
     CalculatorType calculate(x, y);
 
-        switch (operation)
-        {
+        switch (operation) {
         case '+':
             calculate.add();
             break;

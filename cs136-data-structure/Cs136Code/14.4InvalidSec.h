@@ -8,7 +8,7 @@ private:
     std::string message;
 
 public:
-    InvalidSec() : message("Invalid seconds value") {}
+    InvalidSec() : message("Invalid seconds value out of bounds.") {}
 
     InvalidSec(const std::string& msg) : message(msg) {}
 

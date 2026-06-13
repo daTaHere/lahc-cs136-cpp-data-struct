@@ -8,7 +8,7 @@ private:
     std::string message;
 
 public:
-    InvalidMin() : message("Invalid minute value") {}
+    InvalidMin() : message("Invalid minute value out of bounds.") {}
 
     InvalidMin(const std::string& msg) : message(msg) {}
 

@@ -8,7 +8,7 @@ private:
     std :: string message;
 
 public:
-    InvalidHr() : message("Invalid hour value") {}
+    InvalidHr() : message("Invalid hour value out of bounds") {}
 
     InvalidHr(const std :: string& msg) : message(msg) {}
 
