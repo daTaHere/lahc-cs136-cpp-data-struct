@@ -89,4 +89,4 @@ CS 136 - Summer 2026
 
 **Adam Huynh**  
 [🌐 adamhuynh.dev](https://adamhuynh.dev)  
-React • TypeScript • Python • C# • Flask/Django • ASP.NET Core • SQL • DevOps • Cloud Architecture
+Python • C# • C++ • ASP.NET Core • React • SQL • DevOps • GCP • Terraform • Docker • kubernetes 
