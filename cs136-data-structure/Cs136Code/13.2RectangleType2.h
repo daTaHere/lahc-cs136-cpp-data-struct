@@ -2,46 +2,43 @@
 #include <iostream>
 
 using namespace std;
-
-
-class RectangleType2 {
-
-protected:
-    double length;
-    double width;
+class rectangleType2
+{
+    //Overload the stream insertion and extraction operators
+    friend ostream& operator<<(ostream&, const rectangleType2&);
+    friend istream& operator>>(istream&, rectangleType2&);
 
 public:
-    // Constructors
-    RectangleType2();
-    RectangleType2(double l, double w);
-
-    // Methods
     void setDimension(double l, double w);
-    RectangleType2 doubleDimensions();
-    RectangleType2& setLength(const double l);
-    RectangleType2& setWidth(const double w);
     double getLength() const;
     double getWidth() const;
     double area() const;
     double perimeter() const;
-    void print() const;
 
+    //Overload the arithmetic operators
+    friend rectangleType2 operator + (const rectangleType2& rectangle1, const rectangleType2& rectangle2);
+    friend rectangleType2 operator - (const rectangleType2& rectangle1, const rectangleType2& rectangle2);
+    friend rectangleType2 operator * (const rectangleType2& rectangle1, const rectangleType2& rectangle2);
 
-    //  Programming Exercise 13-1a
-    friend RectangleType2& operator++( RectangleType2& a );
-    friend RectangleType2  operator++(  RectangleType2& a, int);
-    friend RectangleType2&  operator--( RectangleType2& a);
-    friend RectangleType2  operator--(  RectangleType2& a, int);
+    //Overload the increment and decrement operators
+    friend rectangleType2& operator ++ (rectangleType2& rhs);          //pre-increment
+    friend rectangleType2 operator ++ (rectangleType2& rhs, int u);       //post-increment
+    friend rectangleType2& operator -- (rectangleType2& rhs);          //pre-decrement
+    friend rectangleType2 operator -- (rectangleType2& rhs, int u);       //post-decrement
 
-    //  Programming Exercise 13-1b
-    friend RectangleType2 operator-(const RectangleType2& lhs, const RectangleType2& rhs);
+    //Overload the relational operators
+    friend bool operator == (const rectangleType2& rectangle1, const rectangleType2& rectangle2);
+    friend bool operator != (const rectangleType2& rectangle1, const rectangleType2& rectangle2);
+    friend bool operator <= (const rectangleType2& rectangle1, const rectangleType2& rectangle2);
+    friend bool operator < (const rectangleType2& rectangle1, const rectangleType2& rectangle2);
+    friend bool operator >= (const rectangleType2& rectangle1, const rectangleType2& rectangle2);
+    friend bool operator > (const rectangleType2& rectangle1, const rectangleType2& rectangle2);
 
+    //constructors
+    rectangleType2();
+    rectangleType2(double l, double w);
 
-    //  Programming Exercise 13-1b
-    friend bool  operator==(const RectangleType2&, const RectangleType2& b) ;
-    friend bool  operator!=(const RectangleType2&, const RectangleType2& b) ;
-    friend  bool  operator>(const RectangleType2& a, const RectangleType2& b);
-    friend bool  operator>=(const RectangleType2& a, const RectangleType2& b);
-    friend bool  operator<(const RectangleType2& a, const RectangleType2& b);
-    friend bool  operator<=(const RectangleType2& a, const RectangleType2& b);
+protected:
+    double length;
+    double width;
 };
