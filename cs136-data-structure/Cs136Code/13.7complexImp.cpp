@@ -2,117 +2,117 @@
 #include <iomanip> 
 #include "13.7ComplexType.h"
 
-ComplexType :: ComplexType(double real, double imag) : 
-	realPart(real), imaginaryPart(imag) {};
+ostream& operator<< (ostream& os, const complexType& complex)
+{
+	os << "(" << complex.realPart << ", "
+		<< complex.imaginaryPart << ")";
+	return os;
+}
 
-void ComplexType :: setComplex(const double& real, const double& imag) {
+istream& operator>> (istream& is, complexType& complex)
+{
+	char ch;
+
+	is >> ch;                     //read and discard (
+	is >> complex.realPart;       //get the real part
+	is >> ch;                     //read and discard,
+	is >> complex.imaginaryPart;  //get the imaginary part
+	is >> ch;                     //read and discard)
+
+	return is;
+}
+
+bool complexType::operator==(const complexType& otherComplex) const
+{
+	return(realPart == otherComplex.realPart &&
+		imaginaryPart == otherComplex.imaginaryPart);
+}
+
+//constructor
+complexType::complexType(double real, double imag)
+{
 	realPart = real;
 	imaginaryPart = imag;
-};
-
-void ComplexType :: getComplex(double& real, double& imag) const {
-    real = realPart;
-    imag = imaginaryPart;
 }
 
-// member overload operators
-ComplexType ComplexType :: operator+ (const ComplexType& other) const {
-    ComplexType sum;
-    sum.realPart = realPart + other.realPart;
-    sum.imaginaryPart = imaginaryPart + other.imaginaryPart;
-    return sum;
-};
-
-ComplexType ComplexType :: operator* (const ComplexType& other) const {
-    ComplexType prod;
-    double ac = realPart * other.realPart;
-    double bd = imaginaryPart * other.imaginaryPart;
-    prod.realPart = ac - bd;
-
-    double ad = realPart * other.imaginaryPart;
-    double bc = imaginaryPart * other.realPart;
-    prod.imaginaryPart = ad + bc;
-    
-    return prod;
-};
-
-bool ComplexType :: operator== (const ComplexType& other) const {
-    return (realPart == other.realPart && imaginaryPart == other.imaginaryPart);
+void complexType::setComplex(const double& real, const double& imag)
+{
+	realPart = real;
+	imaginaryPart = imag;
 }
 
-// friend overload operator 
-ostream& operator<<(ostream& out, const ComplexType& lhs) {
-    out << "("  << lhs.realPart << ", " << lhs.imaginaryPart << ")";
-    return out;
+void complexType::getComplex(double& real, double& imag) const
+{
+	real = realPart;
+	imag = imaginaryPart;
+}
+
+//overload the operator +
+complexType complexType::operator+(const complexType& otherComplex) const
+{
+	complexType temp;
+
+	temp.realPart = realPart + otherComplex.realPart;
+	temp.imaginaryPart = imaginaryPart + otherComplex.imaginaryPart;
+
+	return temp;
+}
+
+//overload the operator *
+complexType complexType::operator*(const complexType& otherComplex) const
+{
+	complexType temp;
+
+	temp.realPart = (realPart * otherComplex.realPart) -
+		(imaginaryPart * otherComplex.imaginaryPart);
+	temp.imaginaryPart = (realPart * otherComplex.imaginaryPart) +
+		(imaginaryPart * otherComplex.realPart);
+	return temp;
+}
+
+// overload the operator -
+complexType complexType::operator-(const complexType& otherComplex) const {
+	complexType temp;
+	temp.realPart = (this->realPart - otherComplex.realPart);
+	temp.imaginaryPart = (this->imaginaryPart - otherComplex.imaginaryPart);
+
+	return temp;
 };
-istream& operator>>(istream& in, ComplexType& lhs) {
-    char ch;
-    in >> ch >> lhs.realPart; 
-    in >> ch >> lhs.imaginaryPart;
-    in >> ch;
-    return in;
+// overload the oeprator /
+complexType complexType::operator/(const complexType& otherComplex) const {
+
+	complexType temp;
+
+	double c = otherComplex.realPart;
+	double d = otherComplex.imaginaryPart;
+	double divisor = (c * c) + (d * d);
+
+	if (int(divisor) == 0) {
+		cout << "Divide by 0 error" << endl;
+		return temp;
+	}
+
+
+	double a = this->realPart;
+	double b = this->imaginaryPart;
+
+	temp.realPart = (a * c + b * d) / divisor;
+	temp.imaginaryPart = (-1 * (a * d) + b * c) / divisor;
+
+	return temp;
 };
 
-//  ========  13.7 overload operator ( -, / )  ==========================
-ComplexType ComplexType :: operator- (const ComplexType& other) const {
-    ComplexType diff;
-    diff.realPart = realPart - other.realPart;
-    diff.imaginaryPart = imaginaryPart - other.imaginaryPart;
-    return diff;
-};
-
-ComplexType ComplexType :: operator/ (const ComplexType& other) const {
-    double a = realPart;
-    double b = imaginaryPart;
-    double c = other.realPart;
-    double d = other.imaginaryPart;
-    ComplexType quotient;
-    if (c != 0 || d != 0) {
-        double donaminator = (c * c) + (d * d);
-        quotient.realPart = (a * c + b * d) / donaminator;
-        quotient.imaginaryPart = (-1 * (a * d) + (b * c)) / donaminator;
-
-        return quotient;
-    }
-    cout << "Invalid operation, divide by 0 violation!\n" << endl;
-    return quotient;
-};
 
 
 void Test13_7() {
     cout << "=======   13.7 ( 7ComplexType ) =========\n";
-    cout << fixed << showpoint << setprecision(2);
+	complexType a(5.00, 6.00);
+	complexType b(8.00, 0.00);
 
-    ComplexType num1(21, 18);
-    ComplexType num2;
-    ComplexType num3;
-    cout << "Num1 = " << num1 << endl;
-    cout << "Num2 = " << num2 << endl;
-
-    cout << "Enter a complex number " << "in the form (a, b): ";
-    cin >> num2;
-    cout << endl;
-    cout << "New value of num2 = " << num2 << endl;
-    num3 = num1 + num2;
-
-    cout << "Num3 = " << num3 << endl;
-    cout <<  num1 << " + " << num2 << " = " << num1 + num2 << endl;
-    cout <<  num1 << " * " << num2 << " = " << num1 * num2 << endl;
-
-    cout << "\n-------     test ==  ------" << endl;
-    cout << "( num1 == num1 ) = " << ((num1 == num1) != 0 ? "True" : "False") << endl;
-    cout << "( num1 == num2 ) = " << ((num1 == num2) != 0 ? "True" : "False") << endl;
-
-
-    // 13.7 test  ============================
-    cout << "\n-------     test  -  ------" << endl;
-    cout << "( num1 - num1 ) = " << (num1 - num1) << endl;
-    cout << "( num1 - num2 ) = " << (num1 - num2) << endl;
-
-    cout << "\n-------     test  /  ------" << endl;
-    cout << "( num1/num2 ) = " << (num1/ num2) << endl;
-
-    ComplexType zeros;
-    cout << "( num1/zeros ) = " << (num1 / zeros) << endl;
+	cout << "a + b = " << a + b << endl;
+	cout << "a - b = " << a - b << endl;
+	cout << "a * b = " << a * b << endl;
+	cout << "a / b = " << a / b << endl;
+	cout << "a == b: " << (a == b ? "True" : "False" ) << endl;
 }
 

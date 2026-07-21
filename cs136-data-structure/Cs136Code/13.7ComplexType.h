@@ -1,31 +1,42 @@
 #pragma once
 #include <iostream>
+#include <iostream> 
+
 using namespace std;
-class ComplexType {
-private:
-    double realPart;
-    double imaginaryPart;
 
-
+class complexType
+{
+	// overload stream insertion and extraction operators
+	friend ostream& operator<< (ostream&, const complexType&);
+	friend istream& operator>> (istream&, complexType&);
 
 public:
-    //Constructor
-    ComplexType(double real = 0, double imag = 0);
+	void setComplex(const double& real, const double& imag);
+	//set the complex number according to the parameters
+	//Postcondition: realPart = real; imaginaryPart = imag
 
-    // Getters and Setters
-    void setComplex(const double& real, const double& imag);
-    void getComplex(double& real, double& imag) const;
+	void getComplex(double& real, double& imag) const;
+	//Function to retrieve the complex number. 
+	//Postcondition: real = realPart; imag = imaginaryPart
 
-    //Overload the operators
-    ComplexType operator+ (const ComplexType& other) const;
-    ComplexType operator* (const ComplexType& other) const;
-    bool operator== (const ComplexType& other) const;
-   
-    //Friend Overload the stream insertion and extraction operators
-    friend ostream& operator<<(ostream& out, const ComplexType&);
-    friend istream& operator>>(istream& in, ComplexType&);
+	complexType(double real = 0, double imag = 0);
+	//Constructor
+	//Initialize the complex number according to the parameters
+	//Postcondition: realPart = real; imaginaryPart = imag
 
-    // 13.7 methods  ===========================
-    ComplexType operator- (const ComplexType& other) const;
-    ComplexType operator/ (const ComplexType& other) const;
+	complexType operator+(const complexType& otherComplex) const;
+	//overload +
+	complexType operator*(const complexType& otherComplex) const;
+	//overload * 
+	complexType operator-(const complexType& otherComplex) const;
+	//overload -
+	complexType operator/(const complexType& otherComplex) const;
+	//   //overload /
+
+	bool operator==(const complexType& otherComplex) const;
+	//overload ==
+
+private:
+	double realPart;      // variable to store the real part
+	double imaginaryPart; // variable to store the imaginary part
 };
