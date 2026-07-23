@@ -65,5 +65,8 @@
     <ClCompile Include="14.4clocktypeImp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="15.2starPatternImp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
