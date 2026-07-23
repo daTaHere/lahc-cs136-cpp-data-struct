@@ -68,5 +68,8 @@
     <ClCompile Include="15.2starPatternImp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="15.6Palindrome.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
