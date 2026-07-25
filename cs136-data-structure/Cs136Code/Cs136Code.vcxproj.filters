@@ -80,5 +80,11 @@
     <ClCompile Include="16.12doublyLinkedList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="16.13circularLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="16.13circularLinkedList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

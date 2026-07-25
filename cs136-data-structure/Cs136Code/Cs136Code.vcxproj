@@ -148,6 +148,8 @@
     <ClCompile Include="15.6Palindrome.cpp" />
     <ClCompile Include="15.9reverseDigits.cpp" />
     <ClCompile Include="16.12doublyLinkedList.cpp" />
+    <ClCompile Include="16.13circularLinkedList.cpp" />
+    <ClCompile Include="16.13circularLinkedList.h" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="13.1rectangleImp.cpp" />
   </ItemGroup>
