@@ -8,6 +8,8 @@ void Test14_2();
 void Test14_4();
 void Test15_2();
 void Test15_6();
+void Test15_9();
+void Test16_12();
 
 int main() {
 	//Test13_1();
@@ -17,6 +19,8 @@ int main() {
 	//Test14_2();
 	//Test14_4();
 	//Test15_2();
-	Test15_6();
+	////Test15_6();
+	//Test15_9();
+	Test16_12();
 	return 0;
 }

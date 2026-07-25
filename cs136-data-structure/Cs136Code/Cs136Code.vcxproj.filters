@@ -39,6 +39,9 @@
     <ClInclude Include="14.4InvalidSec.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="16.12doublyLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -69,6 +72,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="15.6Palindrome.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="15.9reverseDigits.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="16.12doublyLinkedList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
