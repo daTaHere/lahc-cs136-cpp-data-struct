@@ -42,6 +42,15 @@
     <ClInclude Include="16.12doublyLinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="17.1stackADT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="17.1myStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="17.2linkedStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -84,6 +93,12 @@
       <Filter>Header Files</Filter>
     </ClCompile>
     <ClCompile Include="16.13circularLinkedList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="17.1stack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="17.2linkedStack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
