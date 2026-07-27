@@ -13,6 +13,8 @@ void Test16_12();
 void Test16_13();
 void Test17_1();
 void Test17_2();
+void Test17_3();
+
 int main() {
 	//Test13_1();
 	//Test13_2();
@@ -26,6 +28,8 @@ int main() {
 	//Test16_12();
 	//Test16_13();
 	//Test17_1();
-	Test17_2();
+	//Test17_2();
+	Test17_3();
+
 	return 0;
 }

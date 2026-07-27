@@ -139,6 +139,7 @@
     <ClInclude Include="17.1myStack.h" />
     <ClInclude Include="17.1stackADT.h" />
     <ClInclude Include="17.2linkedStack.h" />
+    <ClInclude Include="17.3myStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="13.2rectangleImpfriends.cpp" />
@@ -155,6 +156,7 @@
     <ClCompile Include="16.13circularLinkedList.h" />
     <ClCompile Include="17.1stack.cpp" />
     <ClCompile Include="17.2linkedStack.cpp" />
+    <ClCompile Include="17.3reverseLinkedList.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="13.1rectangleImp.cpp" />
   </ItemGroup>
