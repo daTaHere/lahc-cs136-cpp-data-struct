@@ -57,6 +57,9 @@
     <ClInclude Include="17.4linkedStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="18.3searchSortAlgorithems.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -111,6 +114,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="17.4reverseLinkedStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="18.3searchSortAlogrithms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="18.5modBubblesort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
