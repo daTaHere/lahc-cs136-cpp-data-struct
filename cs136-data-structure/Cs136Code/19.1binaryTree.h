@@ -71,6 +71,9 @@ private:
     //Postcondition: The number of leaves in the binary
     //               tree to which p points is returned.
 
+    // 19.3 helper 
+    void swapNode(nodeType<elemType>*& p);
+
 public:
     binaryTreeType();
     //Default constructor
@@ -134,7 +137,9 @@ public:
     //               If the binary tree is empty or
     //               deleteItem is not in the binary tree,
     //               an appropriate message is printed.
-
+    
+    // 19.3 funct dec
+    void swapSubtrees();
 
 };
 
@@ -328,3 +333,24 @@ int binaryTreeType<elemType> ::leavesCount(nodeType<elemType>* p) const {
         return leavesCount(p->rLink) + leavesCount(p->lLink);
 
 };
+
+
+
+// 19.3 
+
+template <typename elemType>
+void  binaryTreeType<elemType>:: swapNode(nodeType<elemType>*& p) {
+    if (!p)
+        return;
+
+    nodeType<elemType>* temp = p->lLink;
+    p->lLink = p->rLink;
+    p->rLink = temp;
+    swapNode(p->lLink);
+    swapNode(p->rLink);
+}
+
+template <typename elemType>
+void binaryTreeType<elemType>::swapSubtrees() {
+    swapNode(root);
+}

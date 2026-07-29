@@ -167,6 +167,7 @@
     <ClCompile Include="18.8insertSort.cpp" />
     <ClCompile Include="19.1nodeCount.cpp" />
     <ClCompile Include="19.2leavesCount.cpp" />
+    <ClCompile Include="19.3swapSubTree.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="13.1rectangleImp.cpp" />
   </ItemGroup>
