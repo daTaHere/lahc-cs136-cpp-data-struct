@@ -134,5 +134,8 @@
     <ClCompile Include="19.1nodeCount.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="19.2leavesCount.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

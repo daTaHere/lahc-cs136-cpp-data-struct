@@ -138,18 +138,6 @@ public:
 
 };
 
-template <typename elemType>
-int binaryTreeType<elemType>::nodeCount(nodeType<elemType>* p) const {
-    
-    if (!p)
-        return 0;
-
-    int leftCount = nodeCount(p->lLink);
-    int rightCount = nodeCount(p->rLink);
-
-    return 1 + leftCount + rightCount;
-}
-
 template <class elemType>
 bool binaryTreeType<elemType>::isEmpty() const
 {
@@ -315,3 +303,28 @@ operator=(const binaryTreeType<elemType>& otherTree)
     return *this;
 }
 
+//================ Exercise funcs ==================================
+//19.1
+template <typename elemType>
+int binaryTreeType<elemType>::nodeCount(nodeType<elemType>* p) const {
+
+    if (!p)
+        return 0;
+
+    int leftCount = nodeCount(p->lLink);
+    int rightCount = nodeCount(p->rLink);
+
+    return 1 + leftCount + rightCount;
+}
+
+//19.2
+template <typename elemType>
+int binaryTreeType<elemType> ::leavesCount(nodeType<elemType>* p) const {
+    if (!p)
+        return 0;
+    else
+        if(!p->rLink && !p->lLink)
+            return 1;
+        return leavesCount(p->rLink) + leavesCount(p->lLink);
+
+};
