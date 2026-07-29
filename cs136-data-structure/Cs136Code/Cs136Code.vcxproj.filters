@@ -60,6 +60,12 @@
     <ClInclude Include="18.3searchSortAlgorithems.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="19.1binaryTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="19.1binarySearchTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -120,6 +126,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="18.5modBubblesort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="18.8insertSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="19.1nodeCount.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

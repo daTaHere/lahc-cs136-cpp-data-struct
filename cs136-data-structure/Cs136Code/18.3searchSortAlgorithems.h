@@ -1,5 +1,8 @@
 #pragma once
 
+using namespace std;
+
+//============== seqSort ===============
 template<class elemType>
 int seqOrdSearch(const elemType list[], int length, const elemType& item)
 {
@@ -9,8 +12,10 @@ int seqOrdSearch(const elemType list[], int length, const elemType& item)
             return i;
     }
     return -1; // return -1 if item not found
-} //end seqOrdSearch
+} 
 
+
+//============== bubbleSort ===============
 template <typename elemType>
 void modifiedBubbleSort(elemType list[], int length) {
     for (int i = 0; i < length; i++) {
@@ -22,4 +27,35 @@ void modifiedBubbleSort(elemType list[], int length) {
             }
         }
     }
+}
+
+//============== insertionSort ===============
+template <class elemType>
+void insertionSort(elemType list[], int length)
+{
+    for (int firstOutOfOrder = 1; firstOutOfOrder < length;
+        firstOutOfOrder++)
+        if (list[firstOutOfOrder] < list[firstOutOfOrder - 1])
+        {
+            elemType temp = list[firstOutOfOrder];
+            int location = firstOutOfOrder;
+
+            do
+            {
+                list[location] = list[location - 1];
+                location--;
+            } while (location > 0 && list[location - 1] > temp);
+
+            list[location] = temp;
+        }
+} 
+
+
+// ============== Helper ===============
+template <typename Type>
+void printList(Type nums[], int length ) {
+    for (int i = 0; i < length; i++) 
+        cout << nums[i] << " ";
+    cout << endl;
+        
 }

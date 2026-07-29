@@ -17,6 +17,8 @@ void Test17_3();
 void Test17_4();
 void Test18_3();
 void Test18_5();
+void Test18_8();
+void Test19_1();
 
 int main() {
 	//Test13_1();
@@ -35,7 +37,9 @@ int main() {
 	//Test17_3();
 	//Test17_4();
 	//Test18_3();
-	Test18_5();
+	//Test18_5();
+	//Test18_8();
+	Test19_1();
 
 	return 0;
 }
