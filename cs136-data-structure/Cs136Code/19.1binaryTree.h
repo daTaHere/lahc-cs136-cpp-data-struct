@@ -74,6 +74,9 @@ private:
     // 19.3 helper 
     void swapNode(nodeType<elemType>*& p);
 
+    // 19.4 helper
+    int countSingles(const nodeType<elemType>* p) const ;
+
 public:
     binaryTreeType();
     //Default constructor
@@ -140,7 +143,9 @@ public:
     
     // 19.3 funct dec
     void swapSubtrees();
-
+    
+    // 19.4 func dec
+    int singleParent() const;
 };
 
 template <class elemType>
@@ -353,4 +358,23 @@ void  binaryTreeType<elemType>:: swapNode(nodeType<elemType>*& p) {
 template <typename elemType>
 void binaryTreeType<elemType>::swapSubtrees() {
     swapNode(root);
+}
+
+//19.4
+
+template <typename elemType>
+int binaryTreeType<elemType> ::countSingles(const nodeType<elemType>* p) const {
+    if (!p)
+        return 0;
+
+    int count = 0;
+
+    if ((!p->lLink && p->rLink) || (p->lLink && !p->rLink))
+        count++;
+    return count + countSingles(p->lLink) + countSingles(p->rLink);
+}
+
+template <typename elemType>
+int binaryTreeType<elemType>::singleParent() const {
+    return countSingles(root);
 }

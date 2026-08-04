@@ -144,6 +144,8 @@
     <ClInclude Include="18.3searchSortAlgorithems.h" />
     <ClInclude Include="19.1binarySearchTree.h" />
     <ClInclude Include="19.1binaryTree.h" />
+    <ClInclude Include="candidateType.h" />
+    <ClInclude Include="personType.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="13.2rectangleImpfriends.cpp" />
@@ -168,8 +170,15 @@
     <ClCompile Include="19.1nodeCount.cpp" />
     <ClCompile Include="19.2leavesCount.cpp" />
     <ClCompile Include="19.3swapSubTree.cpp" />
+    <ClCompile Include="19.4singleParent.cpp" />
+    <ClCompile Include="candidateTypeImp.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="13.1rectangleImp.cpp" />
+    <ClCompile Include="personTypeImp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="candData.txt" />
+    <Text Include="voteData.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

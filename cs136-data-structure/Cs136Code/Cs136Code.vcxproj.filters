@@ -66,6 +66,12 @@
     <ClInclude Include="19.1binarySearchTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="candidateType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="personType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -140,5 +146,18 @@
     <ClCompile Include="19.3swapSubTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="19.4singleParent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="candidateTypeImp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="personTypeImp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="candData.txt" />
+    <Text Include="voteData.txt" />
   </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "19.1binarySearchTree.h"
 
-void Test19_3() {
+void Test19_4() {
 	bSearchTreeType<int> bt;
 
 	int nums;
@@ -13,17 +13,13 @@ void Test19_3() {
 		cin >> nums;
 	}
 
-	cout << "Number of leaves: " << bt.treeLeavesCount() << endl;
-
 	cout << "preorder: ";
 	bt.preorderTraversal();
 	cout << endl;
 
-	cout << "\nSwap: ";
-	bt.swapSubtrees();
-	cout << endl;
 
-	cout << "preorder: ";
-	bt.preorderTraversal();
+
+	cout << "Number of single parent nodes: ";
+	cout << bt.singleParent();
 	cout << endl;
 }
