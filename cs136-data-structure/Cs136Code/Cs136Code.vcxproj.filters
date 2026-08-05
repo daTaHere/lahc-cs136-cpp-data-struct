@@ -66,10 +66,13 @@
     <ClInclude Include="19.1binarySearchTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="candidateType.h">
+    <ClInclude Include="21.1candidateType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="personType.h">
+    <ClInclude Include="21.1personType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="21.2videoType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -149,15 +152,25 @@
     <ClCompile Include="19.4singleParent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="candidateTypeImp.cpp">
+    <ClCompile Include="21.1candidateTypeImp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="personTypeImp.cpp">
+    <ClCompile Include="21.1personTypeImp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="21.2videoLinkedListType.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="21.2videoTypeImp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="21.2videoLinkedListTypeImp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="candData.txt" />
     <Text Include="voteData.txt" />
+    <Text Include="videoDat.txt" />
   </ItemGroup>
 </Project>
