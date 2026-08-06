@@ -84,6 +84,24 @@
     <ClInclude Include="21.3customerListType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="20graphType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="20linkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="20unorderedLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="20linkedQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="20queueADT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="20weightedGraph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -188,11 +206,20 @@
     <ClCompile Include="21.4dvdStore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="20.1graphs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="candData.txt" />
     <Text Include="voteData.txt" />
     <Text Include="videoDat.txt" />
     <Text Include="custDat.txt" />
+    <Text Include="Ch20_Ex1Data.txt" />
+    <Text Include="Ch20_Ex13Data.txt" />
+    <Text Include="Ch20_Ex2Data.txt" />
+    <Text Include="Ch20_Ex14Data.txt" />
+    <Text Include="Ch20_Ex3Data.txt" />
+    <Text Include="dataSet2.txt" />
   </ItemGroup>
 </Project>

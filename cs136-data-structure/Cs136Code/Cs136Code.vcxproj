@@ -144,12 +144,18 @@
     <ClInclude Include="18.3searchSortAlgorithems.h" />
     <ClInclude Include="19.1binarySearchTree.h" />
     <ClInclude Include="19.1binaryTree.h" />
+    <ClInclude Include="20linkedQueue.h" />
+    <ClInclude Include="20queueADT.h" />
+    <ClInclude Include="20unorderedLinkedList.h" />
+    <ClInclude Include="20weightedGraph.h" />
     <ClInclude Include="21.1candidateType.h" />
     <ClInclude Include="21.1personType.h" />
     <ClInclude Include="21.2videoType.h" />
     <ClInclude Include="21.3customer.h" />
     <ClInclude Include="21.3customerListType.h" />
     <ClInclude Include="21.3personType.h" />
+    <ClInclude Include="20graphType.h" />
+    <ClInclude Include="20linkedList.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="13.2rectangleImpfriends.cpp" />
@@ -175,6 +181,7 @@
     <ClCompile Include="19.2leavesCount.cpp" />
     <ClCompile Include="19.3swapSubTree.cpp" />
     <ClCompile Include="19.4singleParent.cpp" />
+    <ClCompile Include="20.1graphs.cpp" />
     <ClCompile Include="21.1candidateTypeImp.cpp" />
     <ClCompile Include="21.2videoLinkedListType.h" />
     <ClCompile Include="21.2videoLinkedListTypeImp.cpp" />
@@ -189,7 +196,13 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="candData.txt" />
+    <Text Include="Ch20_Ex13Data.txt" />
+    <Text Include="Ch20_Ex14Data.txt" />
+    <Text Include="Ch20_Ex1Data.txt" />
+    <Text Include="Ch20_Ex2Data.txt" />
+    <Text Include="Ch20_Ex3Data.txt" />
     <Text Include="custDat.txt" />
+    <Text Include="dataSet2.txt" />
     <Text Include="videoDat.txt" />
     <Text Include="voteData.txt" />
   </ItemGroup>
