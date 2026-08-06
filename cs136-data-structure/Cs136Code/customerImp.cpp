@@ -32,7 +32,6 @@ void customerType::returnVideo(string title)
 			rentedVideoList.erase(it);
 			break;
 		}
-		it++;
 	}
 }
 
@@ -50,7 +49,6 @@ void customerType::printRentedVideo()
 {
 	for (auto it = rentedVideoList.begin(); it != rentedVideoList.end(); ++it) {
 		cout << *it << ", ";
-		it++;
 	}
 	cout << endl;
 }

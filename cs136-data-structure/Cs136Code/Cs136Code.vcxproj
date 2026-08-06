@@ -180,6 +180,7 @@
     <ClCompile Include="21.2videoLinkedListTypeImp.cpp" />
     <ClCompile Include="21.2videoTypeImp.cpp" />
     <ClCompile Include="21.3personTypeImp.cpp" />
+    <ClCompile Include="21.4dvdStore.cpp" />
     <ClCompile Include="customerImp.cpp" />
     <ClCompile Include="customerListTypeImp.cpp" />
     <ClCompile Include="main.cpp" />

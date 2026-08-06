@@ -139,7 +139,7 @@ void videoListType::print() const {
     }
 }
 
-string inputHelper() {
+static string inputHelper() {
     string input;
     cout << "Enter Title: ";
     getline(cin >> ws, input);
