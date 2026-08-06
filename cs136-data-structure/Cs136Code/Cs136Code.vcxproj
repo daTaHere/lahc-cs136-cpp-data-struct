@@ -147,6 +147,9 @@
     <ClInclude Include="21.1candidateType.h" />
     <ClInclude Include="21.1personType.h" />
     <ClInclude Include="21.2videoType.h" />
+    <ClInclude Include="21.3customer.h" />
+    <ClInclude Include="21.3customerListType.h" />
+    <ClInclude Include="21.3personType.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="13.2rectangleImpfriends.cpp" />
@@ -176,12 +179,16 @@
     <ClCompile Include="21.2videoLinkedListType.h" />
     <ClCompile Include="21.2videoLinkedListTypeImp.cpp" />
     <ClCompile Include="21.2videoTypeImp.cpp" />
+    <ClCompile Include="21.3personTypeImp.cpp" />
+    <ClCompile Include="customerImp.cpp" />
+    <ClCompile Include="customerListTypeImp.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="13.1rectangleImp.cpp" />
     <ClCompile Include="21.1personTypeImp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="candData.txt" />
+    <Text Include="custDat.txt" />
     <Text Include="videoDat.txt" />
     <Text Include="voteData.txt" />
   </ItemGroup>

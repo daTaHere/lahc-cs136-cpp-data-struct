@@ -75,6 +75,15 @@
     <ClInclude Include="21.2videoType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="21.3customer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="21.3personType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="21.3customerListType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -167,10 +176,20 @@
     <ClCompile Include="21.2videoLinkedListTypeImp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="customerImp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="21.3personTypeImp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="customerListTypeImp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="candData.txt" />
     <Text Include="voteData.txt" />
     <Text Include="videoDat.txt" />
+    <Text Include="custDat.txt" />
   </ItemGroup>
 </Project>
